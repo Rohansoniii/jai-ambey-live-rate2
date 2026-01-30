@@ -1,185 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jai Ambey Jewellers Live Rates</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jai Ambey Jewellers Live Rate</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f8f8f8;
-    }
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+  }
 
-    header {
-      background: maroon;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
+  header {
+    background: #800000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
 
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-    }
+  header h1 {
+    margin: 0;
+    font-size: 34px;
+  }
 
-    .contact {
-      margin-top: 8px;
-      font-weight: bold;
-    }
+  header p {
+    margin: 5px 0;
+    font-size: 15px;
+  }
 
-    /* ✅ Scrolling Live Bar */
-    marquee {
-      background: gold;
-      padding: 10px;
-      font-weight: bold;
-      font-size: 18px;
-      color: black;
-    }
+  /* ✅ Flash Live Bar */
+  .livebar {
+    background: black;
+    color: gold;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    animation: blink 1s infinite;
+  }
 
-    .container {
-      max-width: 850px;
-      margin: 30px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0px 0px 10px gray;
-    }
+  @keyframes blink {
+    50% {opacity: 0.4;}
+  }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
+  /* ✅ Scrolling Ticker */
+  marquee {
+    background: gold;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 17px;
+  }
 
-    th, td {
-      border: 1px solid #ddd;
-      padding: 15px;
-      text-align: center;
-      font-size: 18px;
-    }
+  /* ✅ Rate Cards */
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 25px;
+  }
 
-    th {
-      background: maroon;
-      color: white;
-    }
+  .card {
+    background: white;
+    width: 250px;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px gray;
+  }
 
-    .update-time {
-      text-align: center;
-      margin-top: 15px;
-      color: gray;
-    }
+  .card h2 {
+    margin: 0;
+    color: maroon;
+  }
 
-    /* ✅ WhatsApp Button */
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: green;
-      color: white;
-      padding: 15px 20px;
-      border-radius: 50px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0px 0px 10px black;
-    }
+  .price {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: black;
+  }
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #222;
-      color: white;
-      margin-top: 30px;
-    }
-  </style>
+  /* ✅ Full Table */
+  .container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px gray;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 14px;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  th {
+    background: maroon;
+    color: white;
+  }
+
+  /* ✅ WhatsApp Button */
+  .whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: green;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0px 0px 10px black;
+  }
+
+  footer {
+    margin-top: 25px;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+  }
+</style>
 </head>
 
 <body>
 
-  <!-- ✅ Header -->
-  <header>
-    <h1>Jai Ambey Jewellers</h1>
-    <p>Clock Tower, Sikar, Rajasthan – 332001</p>
+<!-- ✅ Header -->
+<header>
+  <h1>Jai Ambey Jewellers</h1>
+  <p>Clock Tower, Sikar, Rajasthan – 332001</p>
+  <p>📞 9414774695 | 9460324695</p>
+</header>
 
-    <div class="contact">
-      📞 9414774695 | 9460324695
-    </div>
-  </header>
+<!-- ✅ Flash Live Bar -->
+<div class="livebar">
+  🔥 LIVE GOLD & SILVER RATE UPDATE 🔥
+</div>
 
-  <!-- ✅ Scrolling Rate Bar -->
-  <marquee>
-    🔥 Gold Buy: ₹<span id="goldBarBuy"></span> |
-    Gold Sell: ₹<span id="goldBarSell"></span> |
-    Silver Buy: ₹<span id="silverBarBuy"></span> |
-    Updated Live ✅
-  </marquee>
+<!-- ✅ Ticker -->
+<marquee>
+Gold Buy ₹<span id="goldBuy"></span> |
+Gold Sell ₹<span id="goldSell"></span> |
+Silver Buy ₹<span id="silverBuy"></span> |
+Updated Live ✅
+</marquee>
 
-  <!-- ✅ Rate Table -->
-  <div class="container">
-    <h2 style="text-align:center;color:maroon;">
-      Today's Live Gold & Silver Rates
-    </h2>
+<!-- ✅ Rate Cards -->
+<div class="cards">
 
-    <table>
-      <tr>
-        <th>Metal</th>
-        <th>Buy Rate</th>
-        <th>Sell Rate</th>
-      </tr>
-
-      <tr>
-        <td>Gold 99.50 (RTGS)</td>
-        <td id="goldBuy"></td>
-        <td id="goldSell"></td>
-      </tr>
-
-      <tr>
-        <td>Gold Future</td>
-        <td id="futureBuy"></td>
-        <td id="futureSell"></td>
-      </tr>
-
-      <tr>
-        <td>Gold Present</td>
-        <td id="presentBuy"></td>
-        <td id="presentSell"></td>
-      </tr>
-
-      <tr>
-        <td>Silver Rate</td>
-        <td id="silverBuy"></td>
-        <td id="silverSell"></td>
-      </tr>
-    </table>
-
-    <div class="update-time">
-      ⏳ Last Updated: <span id="time"></span>
-    </div>
+  <div class="card">
+    <h2>Gold (Buy)</h2>
+    <div class="price">₹<span id="goldBuyCard"></span></div>
   </div>
 
-  <!-- ✅ WhatsApp Button -->
-  <a class="whatsapp" href="https://wa.me/919414774695" target="_blank">
-    💬 WhatsApp
-  </a>
+  <div class="card">
+    <h2>Gold (Sell)</h2>
+    <div class="price">₹<span id="goldSellCard"></span></div>
+  </div>
 
-  <!-- ✅ Footer -->
-  <footer>
-    © 2026 Jai Ambey Jewellers | Live Rate Display
-  </footer>
+  <div class="card">
+    <h2>Silver Rate</h2>
+    <div class="price">₹<span id="silverBuyCard"></span></div>
+  </div>
 
-  <!-- ✅ Load Rates -->
-  <script src="rates.js"></script>
+</div>
 
-  <!-- ✅ Auto Time -->
-  <script>
-    function updateTime() {
-      document.getElementById("time").innerHTML =
-        new Date().toLocaleString();
-    }
-    setInterval(updateTime, 1000);
-    updateTime();
-  </script>
+<!-- ✅ Full Table -->
+<div class="container">
+  <h2 style="text-align:center;color:maroon;">Full Live Rate Table</h2>
+
+  <table>
+    <tr>
+      <th>Metal</th>
+      <th>Buy Rate</th>
+      <th>Sell Rate</th>
+    </tr>
+
+    <tr>
+      <td>Gold 99.50 (RTGS)</td>
+      <td id="goldBuyTable"></td>
+      <td id="goldSellTable"></td>
+    </tr>
+
+    <tr>
+      <td>Gold Future</td>
+      <td id="futureBuy"></td>
+      <td id="futureSell"></td>
+    </tr>
+
+    <tr>
+      <td>Gold Present</td>
+      <td id="presentBuy"></td>
+      <td id="presentSell"></td>
+    </tr>
+
+    <tr>
+      <td>Silver Rate</td>
+      <td id="silverBuyTable"></td>
+      <td id="silverSell"></td>
+    </tr>
+  </table>
+
+  <p style="text-align:center;color:gray;">
+    ⏳ Last Updated: <span id="time"></span>
+  </p>
+</div>
+
+<!-- ✅ WhatsApp Button -->
+<a class="whatsapp" href="https://wa.me/919414774695" target="_blank">
+💬 WhatsApp
+</a>
+
+<footer>
+© 2026 Jai Ambey Jewellers | Live Rate Display
+</footer>
+
+<!-- ✅ Rates File -->
+<script src="rates.js"></script>
+
+<script>
+function updateTime(){
+ document.getElementById("time").innerHTML =
+   new Date().toLocaleString();
+}
+setInterval(updateTime,1000);
+updateTime();
+</script>
 
 </body>
 </html>
