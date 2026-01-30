@@ -1,17 +1,17 @@
 // ✅ Jai Ambey Jewellers Manual Rate Update
 
 let rates = {
-  goldBuy: 177000,
-  goldSell: 169100,
+  goldBuy: 172596,
+  goldSell: 172000,
 
   futureBuy: 176749,
   futureSell: 175100,
 
-  presentBuy: 164550,
+  presentBuy: 157703,
   presentSell: 159250,
 
-  silverBuy: 89000,
-  silverSell: 87000
+  silverBuy: 351906,
+  silverSell: 351906
 };
 
 // ✅ Display Rates on Website
@@ -31,3 +31,4 @@ document.getElementById("silverSell").innerHTML = rates.silverSell;
 document.getElementById("goldBarBuy").innerHTML = rates.goldBuy;
 document.getElementById("goldBarSell").innerHTML = rates.goldSell;
 document.getElementById("silverBarBuy").innerHTML = rates.silverBuy;
+
