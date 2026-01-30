@@ -7,8 +7,8 @@ let rates = {
   futureBuy: 176749,
   futureSell: 175100,
 
-  presentBuy: 157703,
-  presentSell: 159250,
+  presentBuy: 17777,
+  presentSell: 169000,
 
   silverBuy: 351906,
   silverSell: 351906
@@ -31,4 +31,5 @@ document.getElementById("silverSell").innerHTML = rates.silverSell;
 document.getElementById("goldBarBuy").innerHTML = rates.goldBuy;
 document.getElementById("goldBarSell").innerHTML = rates.goldSell;
 document.getElementById("silverBarBuy").innerHTML = rates.silverBuy;
+
 
